@@ -1,18 +1,11 @@
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
 
-	<!-- Show date of post -->
-	<p><?php echo get_the_date('l jS F, Y');?></p>
+	
 
 	<!-- Show the content -->
 	<?php the_content();?>
 
-	<!-- Show the author -->
-	<?php 
-		$fname = get_the_author_meta('first_name');
-		$lname = get_the_author_meta('last_name');
-		
-	?>
-	<p>Posted by <?php echo $fname;?> <?php echo $lname;?></p>
+	
 
 	<!-- Show the tags -->
 	<?php 
@@ -35,6 +28,9 @@
 			</a>
 	
 	<?php endforeach;?>
+
+	<!-- Show date of post -->
+	<p><?php echo get_the_date('l jS F, Y');?></p>
 
 	<!-- Show comment section -->
 	<?php //comments_template();?>
