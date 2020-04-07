@@ -8,6 +8,12 @@ header {
     padding: 2rem 0;
 }
 
+.widget {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 header .top-bar {
     list-style-type: none;
     margin: 0;

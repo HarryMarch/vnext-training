@@ -24,6 +24,7 @@
 
     add_theme_support('menus');
     add_theme_support('post-thumbnails');
+    add_theme_support('widgets');
 
     register_nav_menus(
       array(
@@ -35,4 +36,25 @@
 
     add_image_size('blog-large', 800, 600, false);
     add_image_size('blog-small', 300, 200, true);
+
+    function my_sidebars()
+    {
+        register_sidebar(
+            array(
+                'name' => 'Page Sidebar',
+                'id' => 'page-sidebar',
+                'before_title' => '<h3 class="widget-title">',
+                'after_title' => '</h3>'
+            )
+        );
+        register_sidebar(
+            array(
+                'name' => 'Blog Sidebar',
+                'id' => 'blog-sidebar',
+                'before_title' => '<h3 class="widget-title">',
+                'after_title' => '</h3>'
+            )
+        );
+    }
+    add_action('widgets_init', 'my_sidebars')
 ?>
