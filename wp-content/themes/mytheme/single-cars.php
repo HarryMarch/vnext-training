@@ -45,6 +45,13 @@
 			    <?php wp_link_pages();?>
 			</div>
 			<div class="col-lg-6">
+
+				<div class="enquiry_form">					
+				
+					<?php gravity_form(1,'Enquire about this car', null, false, ['rego' => get_field('registration')], true, 100, true);?>
+					
+				</div>
+
 				<ul>
 					<li>
 						Color: <?php the_field('color');?>
