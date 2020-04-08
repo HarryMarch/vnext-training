@@ -46,11 +46,14 @@
 			</div>
 			<div class="col-lg-6">
 
-				<div class="enquiry_form">					
+				<!-- Gravity form -->
+				<!--<div class="enquiry_form">					
 				
 					<?php gravity_form(1,'Enquire about this car', null, false, ['rego' => get_field('registration')], true, 100, true);?>
 					
-				</div>
+				</div>-->
+
+				<?php get_template_part('includes/form', 'enquiry');?>
 
 				<ul>
 					<li>
