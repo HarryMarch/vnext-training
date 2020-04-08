@@ -168,3 +168,17 @@ function enquiry_form()
 
     wp_send_json_success($formdata['fname']);
 }
+
+
+add_action('phpmailer_init', 'custom_mailer');
+function custom_mailer(PHPMailer $phpmailer)
+{
+    $phpmailer->SetFrom('cuongnn@vnext.com.vn', 'Cuong Nguyen');
+    $phpmailer->Host = 'email-smtp.us-west-2.amazonaws.com';
+    $phpmailer->Port = 587;
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->SMTPSecure = 'tls';
+    $phpmailer->Username = SMTP_LOGIN;
+    $phpmailer->Password = SMTP_PASSWORD;
+    $phpmailer->IsSMTP();
+}

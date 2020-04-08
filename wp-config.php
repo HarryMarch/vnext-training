@@ -17,7 +17,9 @@
  *
  * @package WordPress
  */
-
+ 
+define('SMTP_LOGIN', 'cuongnn');
+define('SMTP_PASSWORD', '123456');
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'wordpress' );
