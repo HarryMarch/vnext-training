@@ -1,5 +1,6 @@
 <div id="success_message" class="alert alert-success" style="display:none"></div>
 
+
 <form id="enquiry">
     <h2>Send an enquiry about <?php the_title();?></h2>
 
@@ -53,6 +54,7 @@
 
             var formdata = new FormData;
             formdata.append('action', 'enquiry');
+            formdata.append('nonce', '<?php echo wp_create_nonce('ajax-nonce');?>');
             formdata.append('enquiry', form);
 
             $.ajax(endpoint, {
@@ -70,7 +72,7 @@
                 },
 
                 error: function(err) {
-
+                    alert(err.responseJSON.data);
                 }
             })
         });
