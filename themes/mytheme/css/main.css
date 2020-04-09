@@ -4,14 +4,14 @@ header {
     height: 100px;
 }
 
-.page_wrap {
-    padding: 2rem 0;
-}
-
 .widget {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.page_wrap {
+    padding: 2rem 0;
 }
 
 header .top-bar {
@@ -85,12 +85,32 @@ header .top-bar .sub-menu li .sub-menu {
     left: 100%;
 }
 
+.enquiry_form .gform_button{
+    width: 100% !important;
+    background-color: green !important;
+    color: #fff !important;
+    display: block !important;
+    border: 0 !important;
+    padding: 1rem !important;
+}
 
+.enquiry_form .gform_footer {
+    margin: 0 !important;
+}
 
+.enquiry_form input {
+    width: 100% !important;
+}
 
+.enquiry_form .gform_confirmation_message {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.3em;
+}
 
-
-
+.enquiry_form li.gfield {
+    padding-left: 0 !important;
+}
 
 
 

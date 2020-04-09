@@ -32,7 +32,9 @@
             <?php get_template_part('includes/section', 'cars'); ?>
             <?php wp_link_pages(); ?>
         </div>
-        <div class="col-6">
+        <div class="enquiry_form">
+            <?php gravity_form(1, 'Enquire about this car', null, false, 
+                ['rego' => get_field('registration')], true, 100, true) ?>
             <ul>
                 <li>
                     Color: <?php the_field('color'); ?>
