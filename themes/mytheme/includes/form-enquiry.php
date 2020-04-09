@@ -1,4 +1,7 @@
 <div id="success_message" class="alert alert-success" style="display: none"></div>
+
+
+
 <form id="enquiry">
     <h2>Send a enquiry about <?php the_title(); ?></h2>
     <input type="hidden" name="registration" value="<?php the_field('registration'); ?>">
@@ -38,6 +41,8 @@
             var endpoint = ' <?php echo admin_url('admin-ajax.php');?> ';
             var form = $('#enquiry').serialize();
             var formdata = new FormData;
+
+            formdata.append('nonce', '<?php echo wp_create_nonce('ajax-nonce'); ?>dsdsadsadds');
             formdata.append('action', 'enquiry');
             formdata.append('enquiry', form);
 
@@ -53,7 +58,7 @@
                     $('#enquiry').fadeIn(500);
                 },
                 error: function(err) {
-                    
+                    alert(err.responseJSON.data);
                 }
             })
         })
